@@ -1,0 +1,25 @@
+{
+    "Peers": [
+        "tls://ygg-ny-us.incognet.io:8884",
+        "tls://lancis.iscute.moe:49274",
+        "tls://108.175.10.127:61216"
+    ],
+    "InterfacePeers": {},
+    "Listen": [],
+    "AdminListen": "unix:///var/run/yggdrasil.sock",
+    "MulticastInterfaces": [
+        {
+            "Regex": ".*",
+            "Beacon": true,
+            "Listen": true,
+            "Port": 0
+        }
+    ],
+    "AllowedPublicKeys": [],
+    "PublicKey": "",
+    "PrivateKey": "",
+    "IfName": "auto",
+    "IfMTU": 65535,
+    "NodeInfoPrivacy": false,
+    "NodeInfo": {}
+}

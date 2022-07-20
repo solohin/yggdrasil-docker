@@ -3,12 +3,13 @@ With us-based peer list
 
 ## Usage
 ```bash
+docker pull ghcr.io/solohin/yggdrasil-docker:main
 # Generate a private key
-YGG_PRIVATE_KEY=$(docker run --rm solohin/yggdrasil-network keygen)
+YGG_PRIVATE_KEY=$(docker run --rm ghcr.io/solohin/yggdrasil-docker:main keygen)
 echo "YGG_PRIVATE_KEY is: $YGG_PRIVATE_KEY"
 
 # Start docker container
-docker run -d --rm --net=host --cap-add=NET_ADMIN --device=/dev/net/tun -e YGG_PRIVATE_KEY="$YGG_PRIVATE_KEY" --name yggdrasil --privileged solohin/yggdrasil-network
+docker run -d --rm --net=host --cap-add=NET_ADMIN --device=/dev/net/tun -e YGG_PRIVATE_KEY="$YGG_PRIVATE_KEY" --name yggdrasil --privileged ghcr.io/solohin/yggdrasil-docker:main
 
 # Get your ip
 YGG_IP=$(docker exec yggdrasil myip)

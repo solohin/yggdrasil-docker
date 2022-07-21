@@ -1,5 +1,7 @@
 package main
 
+//most of this code copied from yggdrasil github and belongs to them
+
 import (
 	"crypto/ed25519"
 	"encoding/hex"
